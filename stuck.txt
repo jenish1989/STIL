@@ -1,0 +1,986 @@
+﻿STIL 1.0;
+
+Header  {
+Title "thejas_32m_chip_top_cpu_top_stuck_stil" ;
+  Date     "Tue May 23 14:55:33 2023" ;
+  Source  "Tessent Shell  2022.1" ;
+  History  {
+    Ann {*  Fault          : STUCK *}
+    Ann {*  Coverage       : 98.87(TC) 89.26(FC) *}
+    Ann {*  Begin_Verify_Section  *}
+    Ann {*    format            = STIL  *}
+    Ann {*    serial_flag       = OFF  *}
+    Ann {*    test_set_type     = EDT_ALL_TEST  *}
+    Ann {*    pad_value         = 0  *}
+    Ann {*    pattern_begin     = 0  *}
+    Ann {*    pattern_end       = 1  *}
+    Ann {*    one_setup         = ON  *}
+    Ann {*    no_initialization = OFF  *}
+    Ann {*    pattern_checksum  = 319714  *}
+    Ann {*    edt_external      = ON  *}
+    Ann {*  End_Verify_Section  *}
+  }
+}
+
+Signals {
+  
+  
+  "clk_sys" InOut; "rst_in" InOut; "proc_bt" InOut; "gpio0"[15] InOut; "gpio0"[14] InOut; "gpio0"[13] InOut; "gpio0"[12] InOut; "gpio0"[11] InOut; "gpio0"[10] InOut; "gpio0"[9] InOut; "gpio0"[8] InOut; "gpio0"[7] InOut; "gpio0"[6] InOut; "gpio0"[5] InOut; "gpio0"[4] InOut; "gpio0"[3] InOut; "gpio0"[2] InOut; "gpio0"[1] InOut; "gpio0"[0] InOut; "gpio1"[15] InOut; "gpio1"[14] InOut; "gpio1"[13] InOut; "gpio1"[12] InOut; "gpio1"[11] InOut; "gpio1"[10] InOut; "gpio1"[9] InOut; "gpio1"[8] InOut; "gpio1"[7] InOut; "gpio1"[6] InOut; "gpio1"[5] InOut; "gpio1"[4] InOut; "gpio1"[3] InOut; "gpio1"[2] InOut; "gpio1"[1] InOut; "gpio1"[0] InOut; "spi0_mosi" InOut; "spi0_miso" InOut; "spi0_clk" InOut; "spi0_csn" InOut; "spi1_mosi" InOut; "spi1_miso" InOut; "spi1_clk" InOut; "spi1_csn" InOut; "spi2_mosi" InOut; "spi2_miso" InOut; "spi2_clk" InOut; "spi2_csn" InOut; "spi3_mosi" InOut; "spi3_miso" InOut; "spi3_clk" InOut; 
+  "spi3_csn" InOut; "iic0_sda" InOut; "iic0_scl" InOut; "iic1_sda" InOut; "iic1_scl" InOut; "iic2_sda" InOut; "iic2_scl" InOut; "pwm"[7] InOut; "pwm"[6] InOut; "pwm"[5] InOut; "pwm"[4] InOut; "pwm"[3] InOut; "pwm"[2] InOut; "pwm"[1] InOut; "pwm"[0] InOut; "boot" InOut; "urt0_sin" InOut; "urt0_sout" InOut; "urt1_sin" InOut; "urt1_sout" InOut; "urt2_sin" InOut; "urt2_sout" InOut; "tst_mode" InOut; "tjtag_trst" InOut; "tjtag_tck" InOut; "tjtag_tdi" InOut; "tjtag_tms" InOut; "tjtag_tdo" InOut; "tst_clk" InOut; "tedt_upd" InOut; 
+}
+
+SignalGroups {
+  _bidi_ = '"clk_sys" + "rst_in" + "proc_bt" + "gpio0"[15] + "gpio0"[14] + "gpio0"[13] + "gpio0"[12] + "gpio0"[11] + "gpio0"[10] + "gpio0"[9] + "gpio0"[8] + "gpio0"[7] + "gpio0"[6] + "gpio0"[5] + "gpio0"[4] + "gpio0"[3] + "gpio0"[2] + "gpio0"[1] + "gpio0"[0] + "gpio1"[15] + "gpio1"[14] + "gpio1"[13] + "gpio1"[12] + "gpio1"[11] + "gpio1"[10] + "gpio1"[9] + "gpio1"[8] + "gpio1"[7] + "gpio1"[6] + "gpio1"[5] + "gpio1"[4] + "gpio1"[3] + "gpio1"[2] + "gpio1"[1] + "gpio1"[0] + "spi0_mosi" + "spi0_miso" + "spi0_clk" + "spi0_csn" + "spi1_mosi" + "spi1_miso" + "spi1_clk" + "spi1_csn" + "spi2_mosi" + "spi2_miso" + "spi2_clk" + "spi2_csn" + "spi3_mosi" + "spi3_miso" + "spi3_clk" + "spi3_csn" + "iic0_sda" + "iic0_scl" + "iic1_sda" + "iic1_scl" + "iic2_sda" + "iic2_scl" + "pwm"[7] + "pwm"[6] + "pwm"[5] + "pwm"[4] + "pwm"[3] + "pwm"[2] + "pwm"[1] + "pwm"[0] + "boot" + "urt0_sin" + "urt0_sout" + 
+       "urt1_sin" + "urt1_sout" + "urt2_sin" + "urt2_sout" + "tst_mode" + "tjtag_trst" + "tjtag_tck" + "tjtag_tdi" + "tjtag_tms" + "tjtag_tdo" + "tst_clk" + "tedt_upd"';
+  bidi_time_gen_0 = '"clk_sys" + "rst_in" + "proc_bt" + "gpio0"[15] + "gpio0"[14] + "gpio0"[13] + "gpio0"[12] + "gpio0"[11] + "gpio0"[10] + "gpio0"[9] + "gpio0"[8] + "gpio0"[7] + "gpio0"[6] + "gpio0"[5] + "gpio0"[4] + "gpio0"[3] + "gpio0"[2] + "gpio0"[1] + "gpio0"[0] + "gpio1"[15] + "gpio1"[14] + "gpio1"[13] + "gpio1"[12] + "gpio1"[11] + "gpio1"[10] + "gpio1"[9] + "gpio1"[8] + "gpio1"[7] + "gpio1"[6] + "gpio1"[5] + "gpio1"[4] + "gpio1"[3] + "gpio1"[2] + "gpio1"[1] + "gpio1"[0] + "spi0_mosi" + "spi0_miso" + "spi0_clk" + "spi0_csn" + "spi1_mosi" + "spi1_miso" + "spi1_clk" + "spi1_csn" + "spi2_mosi" + "spi2_miso" + "spi2_clk" + "spi2_csn" + "spi3_mosi" + "spi3_miso" + "spi3_clk" + "spi3_csn" + "iic0_sda" + "iic0_scl" + "iic1_sda" + "iic1_scl" + "iic2_sda" + "iic2_scl" + "pwm"[7] + "pwm"[6] + "pwm"[5] + "pwm"[4] + "pwm"[3] + "pwm"[2] + "pwm"[1] + "pwm"[0] + "boot" + "urt0_sin" + 
+       "urt0_sout" + "urt1_sin" + "urt1_sout" + "urt2_sin" + "urt2_sout" + "tst_mode" + "tjtag_trst" + "tjtag_tdi" + "tjtag_tms" + "tjtag_tdo" + "tedt_upd"';
+  bidi_time_gen_1 = '"tjtag_tck" + "tst_clk"';
+  "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" = '"gpio0"[1]' {ScanIn 314;}
+  "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = '"urt0_sout"' {ScanOut 314;}
+}
+
+Timing STUCK_timing {
+  WaveformTable tset_gen_tp1  {
+    Period '40ns' ;
+    Waveforms  {
+      bidi_time_gen_0 { LHXT { '0ns' Z; '10ns' L/H/X/T;}
+              01Z { '0ns' D/U/Z;} }
+      bidi_time_gen_1 { 01 { '0ns' D; '20ns' D/U; '30ns' D;}
+              Z { '0ns' Z;}
+              LHXT { '0ns' Z; '10ns' L/H/X/T;} }
+    }
+  }
+}
+
+ScanStructures  {
+  ScanChain edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1  {
+      ScanLength 314;
+      ScanInversion 0;
+      ScanIn "gpio0"[1];
+      ScanOut "urt0_sout";
+      ScanMasterClock "tst_clk";
+  }
+}
+
+MacroDefs {
+  "scan_edt_grp1" {
+    W tset_gen_tp1;
+    Shift { V { "gpio0"[0] = 1; "tedt_upd" = 0; "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" = #; "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = #; "tst_clk" = 1;  } }
+    W tset_gen_tp1;
+  }
+}
+
+PatternBurst scanpats {
+  PatList { scan_test; }
+}
+
+PatternExec {
+  Timing STUCK_timing;
+  PatternBurst scanpats;
+}
+
+
+Pattern scan_test  {
+  //Pattern:0  Vector:0  TesterCycle:0
+  Ann {* Pattern:0  Vector:0  TesterCycle:0 *}
+  W tset_gen_tp1;
+  V {  _bidi_= \r18 X 0 \r54 X 10X0X00;
+  }
+  Ann {* Begin chain test *}
+  Ann {* + TAP controller reset *}
+  V {  _bidi_= \r18 X 0 \r54 X 0100X00;
+  }
+  Ann {* + Advance TAP controller to idle *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  Ann {* + Targets: *}
+  Ann {* +   Apply 0 *}
+  Ann {* +     writes: *}
+  Ann {* +        thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.all_test            =  1 *}
+  Ann {* +        thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.edt_mode            =  1 *}
+  Ann {* +        thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.int_ltest_en        =  1 *}
+  Ann {* +        thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.ltest_en            =  1 *}
+  Ann {* +        thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.memory_bypass_en    =  1 *}
+  Ann {* +        thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.output_pad_disable  =  1 *}
+  Ann {* +        thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tck_occ_en          =  1 *}
+  Ann {* + TAP vector tjtag_tdi..tjtag_tdo ( *}
+  Ann {* +        W 3:0    R 3:0   thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction[3:0] *}
+  Ann {* + ) *}
+  Ann {* +  Loading: 0111 *}
+  Ann {* + Unloading: 0001 *}
+  Ann {* + Advance TAP controller from idle to Shift-IR *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  Ann {* + Shift-IR *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction -type read -var_bits {3:0} -var_length 4 -pin tjtag_tdo -relative_cycles {3:0} *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110H00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction[0]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction -type read -var_bits {1} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction[1]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction -type read -var_bits {2} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction[2]  *}
+  Ann {* + Advance TAP controller from Shift-IR to Exit-IR *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction -type read -var_bits {3} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction[3]  *}
+  Ann {* + Advance TAP controller from Exit-IR to Update-IR *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  Ann {* + TAP vector tjtag_tdi..tjtag_tdo ( *}
+  Ann {* +        W 1:1    R 1:1   thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib *}
+  Ann {* +        W 0:0    R 0:0   thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib *}
+  Ann {* + ) *}
+  Ann {* +  Loading: 0_1 *}
+  Ann {* + Unloading: 0_0 *}
+  Ann {* + Advance TAP controller from Update-IR to Shift-DR *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  Ann {* + Shift-DR *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {0} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {1} *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib  *}
+  Ann {* + Advance TAP controller from Shift-DR to Exit-DR *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib  *}
+  Ann {* + Advance TAP controller from Exit-DR to Update-DR *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  Ann {* + TAP vector tjtag_tdi..tjtag_tdo ( *}
+  Ann {* +        W 4:4    R 4:4   thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib *}
+  Ann {* +        W 3:3    R 3:3   thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib *}
+  Ann {* +        W 2:2    R 2:2   thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib *}
+  Ann {* +        W 1:1    R 1:1   thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib *}
+  Ann {* +        W 0:0    R 0:0   thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib *}
+  Ann {* + ) *}
+  Ann {* +  Loading: 0_0_0_1_1 *}
+  Ann {* + Unloading: 0_0_0_0_0 *}
+  Ann {* + Advance TAP controller from Update-DR to Shift-DR *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  Ann {* + Shift-DR *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib(1) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {0} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {1} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {2} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {3} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib(1) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {4} *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib(1) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib  *}
+  Ann {* + Advance TAP controller from Shift-DR to Exit-DR *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib(1) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib  *}
+  Ann {* + Advance TAP controller from Exit-DR to Update-DR *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  Ann {* + TAP vector tjtag_tdi..tjtag_tdo ( *}
+  Ann {* +        W 11:11    R 11:11   thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib *}
+  Ann {* +        W 10:10    R 10:10   thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib *}
+  Ann {* +        W  9: 9    R  9: 9   thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib *}
+  Ann {* +        W  8: 2    R  8: 2   thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[6:0] *}
+  Ann {* +        W  1: 1    R  1: 1   thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib *}
+  Ann {* +        W  0: 0    R  0: 0   thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib *}
+  Ann {* + ) *}
+  Ann {* +  Loading: 0_0_1_1111111_0_1 *}
+  Ann {* + Unloading: 0_0_0_0000000_0_0 *}
+  Ann {* + Advance TAP controller from Update-DR to Shift-DR *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  Ann {* + Shift-DR *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr -type read -var_bits {6:0} -var_length 7 -pin tjtag_tdo -relative_cycles {8:2} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib(2) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {0} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib(1) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {1} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib(1) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {9} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib(1) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {10} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib(2) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {11} *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib(2) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib(1) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[0]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr -type read -var_bits {1} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[1]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr -type read -var_bits {2} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[2]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr -type read -var_bits {3} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[3]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr -type read -var_bits {4} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[4]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr -type read -var_bits {5} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[5]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr -type read -var_bits {6} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[6]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib(1) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib(1) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib  *}
+  Ann {* + Advance TAP controller from Shift-DR to Exit-DR *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib(2) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib  *}
+  Ann {* + Advance TAP controller from Exit-DR to idle *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  Ann {* + Targets: *}
+  Ann {* +   Apply 0 *}
+  Ann {* +     writes: *}
+  Ann {* +        thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.ltest_occ_en                     =  1  *}
+  Ann {* +        thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.ltest_static_clock_control_mode  =  0  *}
+  Ann {* +        thejas_32m_chip_top_rtl2_tessent_edt_c1_inst.edt_bypass                        =  0  *}
+  Ann {* +        thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.capture_cycle_width[1:0]     =  10 *}
+  Ann {* +        thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.fast_capture_mode            =  0  *}
+  Ann {* +        thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.inject_tck                   =  0  *}
+  Ann {* +        thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.test_mode                    =  1  *}
+  Ann {* + TAP vector tjtag_tdi..tjtag_tdo ( *}
+  Ann {* +        W 5:5    R 5:5   thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib *}
+  Ann {* +        W 4:4    R 4:4   thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib *}
+  Ann {* +        W 3:3    R 3:3   thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr_sib.sib *}
+  Ann {* +        W 2:2    R 2:2   thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib *}
+  Ann {* +        W 1:1    R 1:1   thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib *}
+  Ann {* +        W 0:0    R 0:0   thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib *}
+  Ann {* + ) *}
+  Ann {* +  Loading: 0_1_1_1_1_1 *}
+  Ann {* + Unloading: 0_0_0_0_0_0 *}
+  Ann {* + Advance TAP controller from idle to Shift-DR *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  Ann {* + Shift-DR *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib(3) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {0} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib(2) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {1} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib(2) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {2} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib(2) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {4} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr_sib.sib -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {3} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib(3) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {5} *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib(3) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib(2) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib(2) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr_sib.sib -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr_sib.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib(2) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib  *}
+  Ann {* + Advance TAP controller from Shift-DR to Exit-DR *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib(3) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib  *}
+  Ann {* + Advance TAP controller from Exit-DR to Update-DR *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  Ann {* + TAP vector tjtag_tdi..tjtag_tdo ( *}
+  Ann {* +        W 18:18    R 18:18   thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib *}
+  Ann {* +        W 17:17    R 17:17   thejas_32m_chip_top_rtl2_tessent_edt_c1_tdr_inst.tdr[0:0] *}
+  Ann {* +        W 16:16    R 16:16   thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib *}
+  Ann {* +        W 15:11    R 15:11   thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr[4:0] *}
+  Ann {* +        W 10:10    R 10:10   thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr_sib.sib *}
+  Ann {* +        W  9: 9    R  9: 9   thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib *}
+  Ann {* +        W  8: 2    R  8: 2   thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[6:0] *}
+  Ann {* +        W  1: 1    R  1: 1   thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib *}
+  Ann {* +        W  0: 0    R  0: 0   thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib *}
+  Ann {* + ) *}
+  Ann {* +  Loading: 0_0_0_01001_0_0_1111111_0_0 *}
+  Ann {* + Unloading: 0_0_0_00000_0_0_0000000_0_0 *}
+  Ann {* + Advance TAP controller from Update-DR to Shift-DR *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  Ann {* + Shift-DR *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr(1) -type read -var_bits {6:0} -var_length 7 -pin tjtag_tdo -relative_cycles {8:2} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib(4) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {0} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib(3) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {1} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib(3) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {9} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib(3) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {16} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr_sib.sib(1) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {10} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr -type read -var_bits {4:0} -var_length 5 -pin tjtag_tdo -relative_cycles {15:11} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl2_tessent_edt_c1_tdr_inst.tdr -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {17} *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib(4) -type read -var_bits {0} -pin tjtag_tdo -relative_cycles {18} *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib(4) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_sri_inst.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib(3) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_sri_ctrl_inst.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr(1) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[0]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr(1) -type read -var_bits {1} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[1]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr(1) -type read -var_bits {2} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[2]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr(1) -type read -var_bits {3} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[3]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr(1) -type read -var_bits {4} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[4]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr(1) -type read -var_bits {5} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[5]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr(1) -type read -var_bits {6} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_tdr_sri_ctrl_inst.tdr[6]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib(3) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_occ_inst.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr_sib.sib(1) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr_sib.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr[0]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr -type read -var_bits {1} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr[1]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr -type read -var_bits {2} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr[2]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr -type read -var_bits {3} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr[3]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr -type read -var_bits {4} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_occ_clk_sys_inst.tdr[4]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib(3) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_sib_edt_inst.sib  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl2_tessent_edt_c1_tdr_inst.tdr -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1100L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl2_tessent_edt_c1_tdr_inst.tdr[0]  *}
+  Ann {* + Advance TAP controller from Shift-DR to Exit-DR *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib(4) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl1_tessent_sib_sti_inst.sib  *}
+  Ann {* + Advance TAP controller from Exit-DR to Update-DR *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  Ann {* + Targets: *}
+  Ann {* +   Apply 1 *}
+  Ann {* +     writes: *}
+  Ann {* +        thejas_32m_chip_top_rtl1_tessent_bscan_interface_I.static_clock_control_mode  =  0 *}
+  Ann {* + TAP vector tjtag_tdi..tjtag_tdo ( *}
+  Ann {* +        W 3:0    R 3:0   thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction[3:0] *}
+  Ann {* + ) *}
+  Ann {* +  Loading: 1111 *}
+  Ann {* + Unloading: 0001 *}
+  Ann {* + Advance TAP controller from Update-DR to Shift-IR *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  Ann {* + Shift-IR *}
+  Ann {* TESSENT_PRAGMA annotation thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction(1) -type read -var_bits {3:0} -var_length 4 -pin tjtag_tdo -relative_cycles {3:0} *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction(1) -type read -var_bits {0} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110H00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction[0]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction(1) -type read -var_bits {1} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction[1]  *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction(1) -type read -var_bits {2} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1110L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction[2]  *}
+  Ann {* + Advance TAP controller from Shift-IR to Exit-IR *}
+  Ann {* TESSENT_PRAGMA bit_annotation thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction(1) -type read -var_bits {3} -pin tjtag_tdo -inversion 0b0 *}
+  V {  _bidi_= \r18 X 0 \r54 X 1111L00;
+  }
+  Ann {* TESSENT_MARKER:Previous Compare : pin tjtag_tdo , ICL register = thejas_32m_chip_top_rtl1_tessent_tap_main_inst.instruction[3]  *}
+  Ann {* + Advance TAP controller from Exit-IR to idle *}
+  V {  _bidi_= \r18 X 0 \r54 X 1101X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1100X00;
+  }
+  V {  _bidi_= \r18 X 0 \r54 X 1000X00;
+  }
+  //Chain Pattern:0  Vector:88  TesterCycle:88
+  Ann {* Chain Pattern:0  Vector:88  TesterCycle:88 *}
+  "chain_pattern 0":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r192 0 11 \r119 0 1;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" =  \r314 X ;
+    }
+  //Chain Pattern:1  Vector:90  TesterCycle:403
+  Ann {* Chain Pattern:1  Vector:90  TesterCycle:403 *}
+  "chain_pattern 1":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r190 0 1101 \r113 0 1000001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = X \r275 L  \r38 X ;
+    }
+  //Chain Pattern:2  Vector:92  TesterCycle:718
+  Ann {* Chain Pattern:2  Vector:92  TesterCycle:718 *}
+  "chain_pattern 2":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r26 0 1001 \r278 0 100001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHHLLHHLLHHLHLLHHLLHHHHHLLLHLHLHHHHHHLLHLLHHHHLLHHHLHHHLHLHLHHLLLHLHHLLHLHHLHLHHHLLHLHLLLHHHHLHLHLLHHHLLHHHHLHHH \r39 L HLLLLHHLHHHLLHHLHHHHHLHHLLLLHLHLHLLHLHLLHHLLHLHLHHLHLHHHHHHHLHHLLHLLHLLHLLHHLLHLHHHLLLLHLHHHHLLLHHHHHHHLLLLHHHHLLLLHHHLLHLHHL \r38 X ;
+    }
+  //Chain Pattern:3  Vector:94  TesterCycle:1033
+  Ann {* Chain Pattern:3  Vector:94  TesterCycle:1033 *}
+  "chain_pattern 3":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r27 0 1111 \r276 0 1100001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHLLHHHHLHHHHLLHLHHHHHLLHHLHHHHHLHHLLHLLLHLLLLHLHLLHLLLHHHHLLLHHLLLHHLLHHLLLHHLHHHLHLLLHLLHHLLLHLLLHHHLHHHHLLHHHHLHHHLHHHLHHLHLLLHLHLHHLHLHLHLLHHHHHHHHHLHLLLLLHLHLHHHLHHHLHLHLLHLHHHLLHLLHLHHLLHHHLHLLLLLHHLHLHHHLHHHHHHLLHHHHLHHHLHHLLHLLLHHHHLHHHLHLLLLLHHLLHLLHLLLLHHHLHHHLHLLHH \r38 X ;
+    }
+  //Chain Pattern:4  Vector:96  TesterCycle:1348
+  Ann {* Chain Pattern:4  Vector:96  TesterCycle:1348 *}
+  "chain_pattern 4":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r29 0 11 \r278 0 10001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLHH \r13 L HLHHLLHLLHLHHLLHLLHLLHLHLLLHHLHLHHHHLLLHHLLLHHHLLLLHLHHLLHHHHHHHLLHLLHLHHHHLLLLLLHHHLLLHLLHHHHLLHLHLHHLHLLHHLLLHHHHHHHLLHHLHLHLHLLLHLLLLLHHHLLLHLLLLLHLLLHLHLLHLLLLLHLLHHLHHLLLHHHHHHLHHLLLHLHLLHHHLLHLHHLHLHLHHLHHLHHLHHHHLLLHHHLHLHLLHHLLHLHHHHLHLLLLLHLLLHLHLLLH \r38 X ;
+    }
+  //Chain Pattern:5  Vector:98  TesterCycle:1663
+  Ann {* Chain Pattern:5  Vector:98  TesterCycle:1663 *}
+  "chain_pattern 5":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r27 0 1111 \r276 0 1010001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLLHHLLLLLLLHHHHLLHLHHLLLHHHHLLLLHHLHLHLHLLLLHHHLHLHHHHLLHLHLHLLHHLLHLLHHLHHLLHLLHHLHLHLLHLLLHHLHHLHLHHHHHHLHHLHHHHHLHHLLHLHLLLHLLLLLLLHHHHLLHHLLLHLHHHLLHHHLLHLHLHHHLLHHHHHLHHHLHLHLLHHHHHHHLLHLHLLHLLLHLHHLLLHHHLHLLHHHHHHHLLLLHHLHLHLHLLHLHLLHLLLLLLHLHHHLHLLHHHLHHHHLLHHHLHLHLHH \r38 X ;
+    }
+  //Chain Pattern:6  Vector:100  TesterCycle:1978
+  Ann {* Chain Pattern:6  Vector:100  TesterCycle:1978 *}
+  "chain_pattern 6":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r27 0 1011 \r277 0 110001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHHLLHHLLLLLLHHLLHHLHLHLH \r12 L HHHLLHHHHLLHHHLHLLLLLLLHHHLHHLLHLLHLHHLHLHLLHHLHLLHLLHLLHHLHHLLLLLHLHLHHLHHLLLHHLLLHLLLHHHHLLLHLHHHLLHLLLHHLLLLHHHHLHLLHHHLHLLLHHLHLLHLLHLLHLHLLLLLHHHLLHLHLLHHHLHLLLLHLLLLHHLHLHHLHLHLHLLLHHLLLLHHLHHHHLLLHHLLLHHLHHLHHHLLLHHHHHHHHLHLLHHLLLHL \r38 X ;
+    }
+  //Chain Pattern:7  Vector:102  TesterCycle:2293
+  Ann {* Chain Pattern:7  Vector:102  TesterCycle:2293 *}
+  "chain_pattern 7":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r29 0 111 \r275 0 1110001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHLLHHHLLHLLLLLLLLHHHHHHHLLLHLLLLLLLHLLHHLHLHHLLHLHLHHLLHHHHLLLHLHHHHLHLHHLHLLHHLLHHLHLLLLHHLLLLHHHHLHLLHHHHHHLLHLLHHLHLLHHHHLLLHLLLHLLHHHLLHHLHHLHHLHHLHHLLLHHLHHLLHLHLHHLLHHHLHLLHLLLHLHHLHHLLHLLLHLHLLLLHLLHLLLLLLHHLLLLLLHLLLLLLHLLHLLHLLLHLLHLLHHLHHLLLLLLLHHHLHHLHHLLHLHLLHLLL \r38 X ;
+    }
+  //Chain Pattern:8  Vector:104  TesterCycle:2608
+  Ann {* Chain Pattern:8  Vector:104  TesterCycle:2608 *}
+  "chain_pattern 8":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r29 0 111 \r278 0 1001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLHHLLHHHLLHLLLLHHHHHLLHLLLLHLHHLHHLLLLLLHLHHHLLLHHHLLLHHLHHLHLLLLLLLLHHHHHLHHLHLHHHHHHLHHLLHLLHLLHHLLLHLLLLHLHLLLHHHLLHLLHHHLLLHHHHHLLHLHLHHHHHLLHLLLLLHHHHHHLHHLLHLLLLLLHHHLLHLLLHLLLLHLHHLLLHLLHLHHLLHHLLLHLLLHHLHHLLHLLLHHHLHLLHLHHLLHHHHLHLHHHHHLHLLHHHHLLHHLLHLLLLHLLHLLLHHHLL \r38 X ;
+    }
+  //Chain Pattern:9  Vector:106  TesterCycle:2923
+  Ann {* Chain Pattern:9  Vector:106  TesterCycle:2923 *}
+  "chain_pattern 9":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r27 0 111 \r277 0 1001001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLLHHLLHHHHLHHHHLLHHHHLLHLLLHLHHLLLHLHLHLHHLLHLHHHHHLLLLHHLHLHLLLHLHLHHHHHLHLHLLHLHHHLLLLLHLHHHLLHLLLHLHLHHHLLHLLLHHHHHHLLHLLLLLLHHHHHHHLLHLLHHHLHLLLHHLLHLLHLLLLHHLHLHLHHLHLLLLHHLHLLLLHHHHLHHHLHLLLLHLHLHHLHLHHHLLHLHHLHLHHLLHLHHLHHLHLLLHLHHHLLHHHLLLLLHHLHHHHHLLLHHLHLLLLLLHLLLL \r38 X ;
+    }
+  //Chain Pattern:10  Vector:108  TesterCycle:3238
+  Ann {* Chain Pattern:10  Vector:108  TesterCycle:3238 *}
+  "chain_pattern 10":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 10101 \r275 0 101001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHHLLHHHHHHHLHHLLHHLLLHHHLHHHLLHHLHLLLHLHHHHLLHHLLLLLHHHLLLHHLHHHLHHHLLLHLHLLHLLLLHLLLLHLLLHHHLHHLLHHLLLHLLHLHHHLLLHLHHHHLLLHLHLHLLHHLLLHLHLHLLLHLHHHLLLLHLHHLLHHLHHHHHLHHHHHLLHLHLLHHLHLLHHHHLLLLHHLHLLLHHHLHLLLHHHHLLHLLHHLLLHLHLLHHHHHLLHHLHHLHLHLLHHLLLHLHLLHLLHLLHLHLHLHHLLLHLL \r38 X ;
+    }
+  //Chain Pattern:11  Vector:110  TesterCycle:3553
+  Ann {* Chain Pattern:11  Vector:110  TesterCycle:3553 *}
+  "chain_pattern 11":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r29 0 11 \r276 0 1101001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHLLHHLHHHHLHHHLLHHLLHHLLLLLHHLHHLLLLHHLHLHHLHHHLHLHLHHHHHHHHLLLHLLHHHHHLLHHLLLLLLHLLLHLHLHHLHLLLLLLHHHHHLHLHLLLHLHLLHHHLLHHLHHLHHHLHLHHHHLHLLHHLLHHHHLLHHLHLLLLLHHLLLHLHLLHLLHHLHHHHHLLLHHHLLLHHLHHLLHLLLHHHHLHHLHLLLLLLLHLLHHHHLLLLLLLHHHLLHHLHHHHLHLLHLHLLLLHHHLHHHHHLHHHHLHLLHLL \r38 X ;
+    }
+  //Chain Pattern:12  Vector:112  TesterCycle:3868
+  Ann {* Chain Pattern:12  Vector:112  TesterCycle:3868 *}
+  "chain_pattern 12":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r29 0 111 \r277 0 11001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLHHLLHHHHHHHHHLLHHHHLHHHLHLHLLLLHLLLLLHHHHHHLHHLLLLLLLHLHLHLLLHLHHLHHHHHHHLHHHLLLHHHHLHLHHLLLHLHLHLLLLHLHLHHHHHLHHHLHHHLLHHLHLHLLHHHHLHHLLHHHLLLLLLHHHLLHLLLLHHHHLLHHLLLLHHLHLLHHHHLLHLLLLHHHHLHHLLHLLHHLHHHLHLHHHLHHHHHLHLHLLHLHHLLLHHLHLHHHHLLLLHLHHHLHLHLLHLHHLHHLHLLHHHHLLHHHLL \r38 X ;
+    }
+  //Chain Pattern:13  Vector:114  TesterCycle:4183
+  Ann {* Chain Pattern:13  Vector:114  TesterCycle:4183 *}
+  "chain_pattern 13":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 11111 \r274 0 1011001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLLHHLHLHLHHLLLHHLHHLHHLLLLHLLHLHLHHLLHHLHLHHLLLHHLHHHHHHHLLHLLLHLLHHHLLLLLLHHHHLHLLLHHLHLLHHHHLHLHHLLHHLHLHLLHHHLHLLLLHHLHLHHHHHHHHHLHLHLHHHHLHHHLLHLHHLHLHLLHLHLHHHLHLLHHLLHHHLLHHHHLHHLHHHLHLLLLLLHHLLHLLLLHLHLHHHHLLHHHHHHHLLHHLHLHLHHHLHLHLHLHHHHHLHLLHHLLHLLHHHHLHHHHLHHLHLLLL \r38 X ;
+    }
+  //Chain Pattern:14  Vector:116  TesterCycle:4498
+  Ann {* Chain Pattern:14  Vector:116  TesterCycle:4498 *}
+  "chain_pattern 14":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 1011 \r276 0 111001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHHLLHLLHHLLHHHHLHLLHHLHLLLHLLHHLHHHHLLLHHHHLHHLLHHLLLLHHLLLLLLLLLHHLLLLLLLLHLHHHLLLHHHLHHLLLLHLHLHLHHHHHLLLLHLLHLLLHHLLLHHLHLHLLHHLHLHHHLHLHHHHHLLHLHHHHLHLHLLLLLHLHLHHLHLHLLHHHHLLLHHLHHLLHLHHHLLLHLHLLHLLLLHLHHHLLHHHLLHHLLHHHHHLHHLHLHLHLLHLLLHLLLHLHLLLLLLLLHLHLLLLHLLHLHLHHLLL \r38 X ;
+    }
+  //Chain Pattern:15  Vector:118  TesterCycle:4813
+  Ann {* Chain Pattern:15  Vector:118  TesterCycle:4813 *}
+  "chain_pattern 15":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r29 0 111 \r275 0 1111001;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHLLHHHLLHLLHLLLHHLLHHHHHLHHLLLLHLHHHHHLLLLLHLLLHLLHHHHHHLLLLLLLLHLHHLLLHHLLLHHLHLHHLLLHHLLHLHLHLLLHHHHHLHHHLLLHHLHLHLLHLHHHLHLHHHLHHLHLLHLLHLHHLHHHHHLHLLHLHHHLLHLLHLHLHLHHHLLHHLLLLHHLLHHHLLLHHLHHLHHHLHLLHLLLHHLLLLLHLHHLLHLHHHHHLLHLLHLLHHLLLLHHLLHHHHLLHLHHLHLLHHLHHLLHHHLLLLHL \r38 X ;
+    }
+  //Chain Pattern:16  Vector:120  TesterCycle:5128
+  Ann {* Chain Pattern:16  Vector:120  TesterCycle:5128 *}
+  "chain_pattern 16":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r30 0 11 \r279 0 101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLHHLLLLHLLHLHHHHHLHHLHLHLHHLHHLLLLLHHHLLLLLLHLLLHHLLLHHHHHHLHLLLLHHLHLLHLLHLLLHLLLHHLLLLHLHHHHHHLHHHHLLLHLHLHHLLLHHLHHLHHLLLHLHLHLLHLLLLHHLHHHHHHLHHLHLHHLHHHLLHLLHLHHHHHHLLLLLLLHHLHHLLLLHHLHHHHHHHLLLHLLHHHLHLHLLLLLLLLLHLLLHLHLLLLLHHHLHHHLHLLHHHHHHHLLLHHLLLLLHLLLLLHHLHHHHHHLL \r38 X ;
+    }
+  //Chain Pattern:17  Vector:122  TesterCycle:5443
+  Ann {* Chain Pattern:17  Vector:122  TesterCycle:5443 *}
+  "chain_pattern 17":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 11111 \r274 0 1000101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLLHHLLLLHHHLHHHLLLHLLLLLHHHHLHLLHLLHLLLHLHHLLLHHHHHLLHHHLLLHLLHHLLLHLHHHHLHHLLLHLLHHLHHLLHHLHLLHHLLHLLHLHHLLHLLHLLHLHHHLLLLHHLHLLLHLLLLHLHHHLLLHHHLHHLLLHLLHLHHLLHHHLLLHHLLLHLLHHLHLLHLHHHHLHHLHHLHLLLLHHLLHHLHHLLLLHLLHLLLHHHLLHLHHLLLLLHHHHHLHLLLLHHLHHLHHHLHHHHHHLHLHHLLLHLLHHLL \r38 X ;
+    }
+  //Chain Pattern:18  Vector:124  TesterCycle:5758
+  Ann {* Chain Pattern:18  Vector:124  TesterCycle:5758 *}
+  "chain_pattern 18":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r27 0 1101 \r277 0 100101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHHLLHHLLHHHHLHHLHHLLLLLLHHLLHLHLHHHLHLHLHHHLHLLLHHLHHHLHLLLLLHLHLLLLHLHLLHLHHLLHLLLHHLLLHHHHHLHHLHLHHHLLLLHHLHLLHHLHHHLHLHLLHLLLLLLHHHHHHHLHHLLLHHLHHLHHLLLL \r10 H LLHHLHLLHHHLLLHHHLHLLHHLLLLLLHLHLHHLHLLHHHHHLLHLHHHLLLLHLHLLHHLLHLLHHLHHLHHHLHHLLHLLLHHHLLHLHHHLLHHLLLLLHHHLL \r38 X ;
+    }
+  //Chain Pattern:19  Vector:126  TesterCycle:6073
+  Ann {* Chain Pattern:19  Vector:126  TesterCycle:6073 *}
+  "chain_pattern 19":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 1111 \r275 0 1100101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHLLHHLLHLHLHHHHLHLHHHHLLHHLLHLHHLLLHLLLLLHHHLHLHHHHHHHLLLHHLLHLHHLLLLLLLHLLHLLLHHHLLHHLHLHLLHLLLLHHHHHLHHHLLHHHLHHHLLHLLHHLHLHHHLLHLLLHHLLHHLHHHHLLLLLHLHHLHLLHLLLHHHHLHHLLLLHLLLHLHHLLLLHLHHHLHHLLLLLHHLHHLHHLHHLHLHLLHHHHHHHLHHHHLHHHHHLHLLHLHLHLLLHHHLLLLLHHHHHHLLHHHHLLHHHLLLHL \r38 X ;
+    }
+  //Chain Pattern:20  Vector:128  TesterCycle:6388
+  Ann {* Chain Pattern:20  Vector:128  TesterCycle:6388 *}
+  "chain_pattern 20":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r30 0 111 \r276 0 10101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLHHLLLLLLLLLHHHHHHLHLLHHHHHLHLLHLLHHLLHHLHLLHHLHLHHHLHHHHLLLHHLHHHHHHLLLHHHHLHLHLLHHHLHLHHLLLHLLLHHHHLLLLHLHLHHLHHHLLLLLHHHHLLHHHHLHLLHLLHLHLLHHHLHLLHLLLHHHHLHLLHHLHHHHLLLHLHLLHHLLLHLHHHHHLLHHHLLHHHHHHHLLLLLLHLHHHHLLHLHHHLHHLHHLHLHLHHHLLLLLHLLLLHHLHHHLHLLLLHLLHHLHHHHLLHHLHLL \r38 X ;
+    }
+  //Chain Pattern:21  Vector:130  TesterCycle:6703
+  Ann {* Chain Pattern:21  Vector:130  TesterCycle:6703 *}
+  "chain_pattern 21":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 111 \r276 0 1010101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLLHHLLHHHLHLLLHHLLLLHHHLLHHLLLLLHLLHLLLLLHHLLHHHHLHLHHHLHHHLHLHLHLLHHLLHLHHLHLHHHLHLLHHLLHHHLLHHLLLHHHHLLLHLHHLHLHLHLHLLLLLLLLHLLLHLHHLLLLHHHHLLLHLLHLLLLLHHLLLHLLLLLLHLLLLLHLLHLLLLHLLHLHLHHLHLHLLHLHHHLLHLLLLLHLHHHLLHLHHLLHHHLHHHLLHLLLLHHHHHLLLLLLHHLLLHHLLHHHHHLLHLHHLLLLHLHHL \r38 X ;
+    }
+  //Chain Pattern:22  Vector:132  TesterCycle:7018
+  Ann {* Chain Pattern:22  Vector:132  TesterCycle:7018 *}
+  "chain_pattern 22":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r27 0 10001 \r276 0 110101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHHLLHHHLLHHHHHHHHLHLHHHLLLHHLHHLLLLLLHHHLLHHLHLHLLLLLLLLHHHHLLLLLLHHHHLLHLHLHHHHLLHHLHLHHHHHLHLLHHHHLHLHLLLHLLLHLHHHLLHLHLLLHLLHLHLHHHLLLHHHLLLHLHHLLLHHLLHHHLHHLLHLLLHHHLLHLLLHHHLHLHLHHLLLHLHHLLLLHHLHHHHHLLHLHLLLHLHLLHLHHHHHHLHLLHHLHHLLHLHLHHHHHLHHLHHLHHLHLLHHHLHLLHHLHLLHHHL \r38 X ;
+    }
+  //Chain Pattern:23  Vector:134  TesterCycle:7333
+  Ann {* Chain Pattern:23  Vector:134  TesterCycle:7333 *}
+  "chain_pattern 23":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r29 0 11 \r276 0 1110101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHLLHHHHHHHHLLHLLLLHLHLHLLLHHLHLHHHHLLHLHLHHHLHHLHHLLHLHLLHLHLHHHLLLHHHLHHLHHHHLHHLLLHLHHLHHLLHHLHLHLLLLHHHHHLHLHLHHLLHHLLLLLLLHLHLLLLLLHLHHHLLLLHLLHHHHLHLLHHLHLLHLHLLHHHLLLHLLLHLHHLHHLLLLHLLLLHHHLHHLLLHHLLHLLLHLLHHLHHHLHLHLLLLHLLLHLHHLLHHHLHHHHLHHHHHLLHHLLLHHHHHLHHHLLHLLHLHL \r38 X ;
+    }
+  //Chain Pattern:24  Vector:136  TesterCycle:7648
+  Ann {* Chain Pattern:24  Vector:136  TesterCycle:7648 *}
+  "chain_pattern 24":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r29 0 101 \r278 0 1101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLHHLLLLLLLLHHHHLHHHLHHHHHHHHLHHLLHHLLHLHHHHLHLLHHLHHLLLLLHHLLHLLLHLHHLLLHLLLHLHHHHHHLHHHLLHHLLLLLLLLHHHLHLLHHLHHHLHHLLLLHHLLHLLLLLHLLLHLLLHHHLLLLLHLHHLLLLLLHLHLHLLHLHHHHLLHHLLHLLLHHLHLHHHLHLLLHLHHLHHHLHHLHHLHHLLLHLHHLHLLHLHLHHLHLHLHLHHHHHHLHLHHLHLLHLLHHLHLLLHHLLHLHHHHHLHHHHL \r38 X ;
+    }
+  //Chain Pattern:25  Vector:138  TesterCycle:7963
+  Ann {* Chain Pattern:25  Vector:138  TesterCycle:7963 *}
+  "chain_pattern 25":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 11001 \r274 0 1001101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLLHHLLHHLLHLHLLHHLLLLLLHHHHLLHHHHLHHHHHLHHLHLHHHLHHHHLHHHHLLLLLHLLLLHLHLHLHHLHLLHLLLHLLLHHHHLLLLHLHLHLLHHHLHHLLHHHHHLHHHLHHLLHLHLLHLLLHHLHLLHLHHHHLHLLHLHLHHLLHHHLLHHLLLHLLLLHLHLHHHHLLHLLHLLHLLLLHLLLHLHHHHHLHLLHLHLLLLLLHLLHHHLLHHLLHLLHHHHLLHLHLHHLHLHLLHHHHHLLLLLHHHHLHHLHHLLLL \r38 X ;
+    }
+  //Chain Pattern:26  Vector:140  TesterCycle:8278
+  Ann {* Chain Pattern:26  Vector:140  TesterCycle:8278 *}
+  "chain_pattern 26":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r27 0 10111 \r276 0 101101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHHLLHLHHHLLLHLHHLLLHHLHLHLLHHHLHLLLLHHHLHLLHLLLLLLLHLHLHLLLLHHHLHHLHHHLLLHHLLHHHLLLLHLHHLLHLLLLLHHHLLHHLHHHLLLHHLHLLLHLLHLHLHLHLLLLLLHLHLHLLHLHHHLHLLHHHHLLHHLLLLLLLLHLHLHLLHHLLLLLLHLHHHHLHHHLHHHLHLLLHHHLHLLHHLHHHHLHHLLHHHHHLLLHLLLHHLHLHHLLHHHHLHLHHHHHLLLLLLHHLLHLHLLLLHLLLHLL \r38 X ;
+    }
+  //Chain Pattern:27  Vector:142  TesterCycle:8593
+  Ann {* Chain Pattern:27  Vector:142  TesterCycle:8593 *}
+  "chain_pattern 27":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 11 \r277 0 1101101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHLLHHLHHHHLLLHHLHLHLHLLLHHLHLLHHLHHLHLLHLHHLLHLHHLLHLHHLLHHHHHLHHHHHLLHLHHHLLLLLHHLHHHHLHHHHLLHHLLHHHLLHLLLHLLLHHLLHHHLHLHLLHHLHLHHLHHLHLHLLLLHLLHLHLLLHLLLLHHLLLHLHLHHLLHHLLLHHLLLLLHHHLHHLLLLLHLLLLHLLLLLLLHHHLHLHHHLLHLHLHLHHHHLLHLLLLHLHHHHLLHHLHLHLHHLHHLLLHLLHLLLHLHLHLHHLLHL \r38 X ;
+    }
+  //Chain Pattern:28  Vector:144  TesterCycle:8908
+  Ann {* Chain Pattern:28  Vector:144  TesterCycle:8908 *}
+  "chain_pattern 28":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r30 0 11 \r277 0 11101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLHHLLLLHHLLLHLLLHLLHHHLHLHHLHHLLLHHLHHHHHHLHHHHLLHHHLHHHHLHLLHLLHHHHHLHLHLLLHLLLHLLHHLLLHHHLHHHLHHHHLHHLHHLHLHLLHHHLLHHLLLHHLLHLHLLHHHHLHHLHLHHLHLHLHHLLLLHHLLHLLHLHHHLHLLHLLL \r10 H LLHLHHLHLHHLHHHLLHHHLLLHLLLLHLLLLLHHHHLHLHLHLHLLLLLHLLHHHHHLHHHLLLHHLHHLHHLLLLHLLHHHHHLHHLL \r38 X ;
+    }
+  //Chain Pattern:29  Vector:146  TesterCycle:9223
+  Ann {* Chain Pattern:29  Vector:146  TesterCycle:9223 *}
+  "chain_pattern 29":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r27 0 1111 \r276 0 1011101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLLHHLLHHHHLLLLLHHHHLLLHHLLHLLHLLLHHLLLHLHHHLLLLHHHLLLHLHHHLHLHLLHLHLLHHHHHLHHLLLLHHHLHHLLHLHHLHHHLHHHLHHHLLHHHHHLHLHHLHLLLHLHLLHHHLLLLLHHHHLHLLHLLHHLLLHHLHHHLLHHLHLHLLHHLLLLLLLHLLHHLHHHHHLLHLHHLLLHLLLHHHLHLHHLLLLLLHHLHLLLLLHLHLLHHHLLLHHHHLLLLHHLHHHHHHLHLHHLHHLHLHHHHHHLLLLHLL \r38 X ;
+    }
+  //Chain Pattern:30  Vector:148  TesterCycle:9538
+  Ann {* Chain Pattern:30  Vector:148  TesterCycle:9538 *}
+  "chain_pattern 30":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r27 0 101 \r278 0 111101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHHLLHHLHLHLLHHHHLHLLLHHHHLHLHHHHHHLLHHLLLLHLHHHHLLHHHLHHHLLHLLHHLHLLLLLHLLHHLHHHLHLLLHLLLLLLHHHHHLLHLHHLLLLLLHLLHLLLLHLHLHHLLHHHHLHLLLLLLLLHHHHLLHLHLHHHLLHLLHHLLLLLLHHLLHHLLLLLHLHHLLLLLLHHLHHLHLLLHHHHLLHLLLLLHLLLHHHHLLLLHLHHHLLHHLLHLLLHHHHLLHLHHLLLLLHHLLHHHHLLLHLHLLHHLLLLLHL \r38 X ;
+    }
+  //Chain Pattern:31  Vector:150  TesterCycle:9853
+  Ann {* Chain Pattern:31  Vector:150  TesterCycle:9853 *}
+  "chain_pattern 31":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r29 0 1111 \r274 0 1111101;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHLLHHLLLLLHLLLHLHLHLHLLHLLLHHHHHHHHLLLLLLHLHHHLHHHLHLHHHHLHHHHLHLLHLHHLLHHLHLLLLLHLHLHLLHLLHHHHHHHLHLHLLHHHHLHHLHHHHHHLHLLLHLHHHLLHHHHHLLHLLLLHLLLLHHHHLHLHLHHLLLHLHHLLHLLLLLHLLLHLLHLLLHLHHHHHLHLLLHLHLHHHLLLLLHHHLHLLHLHHLHLHLLLHHLHHLLHHHHLLLHLLLLHLHHHLHHHHHLLHHLLHHLLHHHLLHLHL \r38 X ;
+    }
+  //Chain Pattern:32  Vector:152  TesterCycle:10168
+  Ann {* Chain Pattern:32  Vector:152  TesterCycle:10168 *}
+  "chain_pattern 32":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r30 0 111 \r279 0 11;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLHHLLLLLHLHLLHHHHLLLHLLHLHLLHHLHHHHLLHHHHLLHLLHLHHHLLLHLHLHHLLLLHLLHHLHLHLLLHLHLLHHLHHHHLHLHLLLLLLHLLLLHLLLHHHHHLHLLLLHLLHHHLHLLLLLHLLLLLHHLLHHHHHLLHLHHLHHLHLHLHLHHLHHLLLLHHHHLLHHLHHHHLLHHLHHLHLLLLHHLLLHLLHHHLLHHHLLLLLLHLLLLHLHHHLHLLHLLLLHLLHLHLLHLLHHLHHHHHHHHHLHLLLHHHHLHHHL \r38 X ;
+    }
+  //Chain Pattern:33  Vector:154  TesterCycle:10483
+  Ann {* Chain Pattern:33  Vector:154  TesterCycle:10483 *}
+  "chain_pattern 33":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r27 0 111 \r277 0 1000011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLLHHLLHHHLLHHHLHHHHLLLHHLHHLLLLLLLLLHHLHHHLHHHHLHHHLLHLHLHLHLLHHHLHLLHHHLLLHLHHHHHLHHHHHLLLLLLHLLLHHLLHHHHHHLLHHHLLHHLLHLLLHLLHLLHLL \r10 H LLHLLLLHLHHLHHLHLLLHLHHHHLHHHHHLHLHHHHHLHHHLLHLLHLHHLLLLLHLHHLLHHHHHHLHLHHHHLLHHHHHHHLHLLLHLLLHHHLHLLHHLHLHHHHHLHHHHLHHHLLLHLHHLLLLLL \r38 X ;
+    }
+  //Chain Pattern:34  Vector:156  TesterCycle:10798
+  Ann {* Chain Pattern:34  Vector:156  TesterCycle:10798 *}
+  "chain_pattern 34":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r27 0 10111 \r276 0 100011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHHLLHHHLLLLHLHLHHHLHLHLHHLLHLLLHHHLLLLLLHHHHHHHLLLHLHHLLHLHHLLHHHHHHHHLLHHHLLLLHLHHHLLLHLLHHLLLHLLHLHHHLLHLLHLHHLHHHHHHLHHLLLHHLHHLLLHLLHHHHHHHLLLLLLLLHHLHHHLLLHHLLLLHHHLHLHHLLHLLHHLLHHHLLLHHLLLLHHHLLLLLLHHHHLHLHLLHLLHLHHHHHHLLHLHHHHLHHLHLLLLLLHHLLHHHHHHLHLHLLLHHLLHLLLLLHHLL \r38 X ;
+    }
+  //Chain Pattern:35  Vector:158  TesterCycle:11113
+  Ann {* Chain Pattern:35  Vector:158  TesterCycle:11113 *}
+  "chain_pattern 35":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 1111 \r275 0 1100011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHLLHHLHHLH \r10 L HLLHLLHLLLLHHLHHHHHLLLHHHLLLLLLHHHHLLLLHLHHLHHHHHHHLLLHHHLHLHHLHLLHLHHHLHHLHLHHHHLLLHLHLLLLLHHLLLLLHHLLHLHHHHLHLHHHHHHHLLLHLLLLHHHHHLLHLHLHHLHLLLLLHLLLLLLLLHLHLLLLHHHHHHLHLHHHLHHHHLLLLHHLLHLHLHLLHHHHLLLLLLLLHHLHLHLHHLLLLLLHLHLHHLLLLLLHHLHHHLHLLHLHLHLLLLHL \r38 X ;
+    }
+  //Chain Pattern:36  Vector:160  TesterCycle:11428
+  Ann {* Chain Pattern:36  Vector:160  TesterCycle:11428 *}
+  "chain_pattern 36":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r29 0 111 \r277 0 10011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLHHLLLLLLHLLHHHLLHLLHLHLLLLHLHLLLLLLHHHLLLLLHLLLLHHLLLLHHLHHLLLLHHLLHHHHHLLHLLHLHHLLLHLLLHHLHHHLHLLHLLLHLHLHHLLHLLLLHLHLHLHHHHHLHHHHLHLHHHLHHLLHLH \r10 L HLHHHLLLLLLLHHLLHLLHHHLLHLLHLHHLLLHLHHLLHHLLLHLHHLLHLHLHLLLLLLHLLHLLHHLLLHHHHLHHHHLHLHHLLLHHLHLHHHLLLLHHLLHLLHLLHLLHHHL \r38 X ;
+    }
+  //Chain Pattern:37  Vector:162  TesterCycle:11743
+  Ann {* Chain Pattern:37  Vector:162  TesterCycle:11743 *}
+  "chain_pattern 37":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 11111 \r274 0 1010011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLLHHLHHLLLHHLHLLHHLLHLHHLHLHLLHLLLHHHLHHHHHHLLLLLLLHHLHHLHLLHLHLLHHHLLLHLHHLHLHLHLHHHLLHLLLLHLHHHLLHHHLLLLLLLHHHLLHLLLHLLLHLLHLLHLHLLLLHLLLLLHLLLLLLLHHHLHHLHHLLHHLHLLHLHLHHHLLLHHHHLHLLLHHHLHHHHLHLLLLLHHLHLLLLLHLHHHLLLHLLLHHLHHHLLLLLLLLHLLLLHHLHLLHLLHLLHHLLHLLLHHLLHHHLLLHLHHL \r38 X ;
+    }
+  //Chain Pattern:38  Vector:164  TesterCycle:12058
+  Ann {* Chain Pattern:38  Vector:164  TesterCycle:12058 *}
+  "chain_pattern 38":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 10111 \r275 0 110011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHHLLHLHHLHLHLLLLHHHLLLLLLHHHLHHHHHLHHHHLLLLLHHHHLHLHLHHHLHLHHLLHHLLHLLHHHLHLLHLLLHHLHHLLHHHHHHHLHLLLLLHHHHLHLLHLHLLLLLLLLHHLLLHLLHHLHHHLHHHLLHLHHLHLHLLHLLHLHHHLHHLHLHHHHHLLHLHLHHLLHHHHHLLHHLHLLHHLLLHLHHLLLHHLHLHHLLLHHHHLLHHLLHLHHLHLLHHLLLHLLLHHHLHHHHLHLLLLHHLLHLLLHHHLHLHLHLL \r38 X ;
+    }
+  //Chain Pattern:39  Vector:166  TesterCycle:12373
+  Ann {* Chain Pattern:39  Vector:166  TesterCycle:12373 *}
+  "chain_pattern 39":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 111 \r276 0 1110011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHLLHHHHLHHHHHHLLLLLLLLLHHHHLHLHHHHLHLHHHLLHHHHHHHLLLLHHLHHHHLHLHLHLHLLHLHHLLLLLLHHLHLLHLLHHLLLLHLHHHHLHHLHHLLLHHLLHHLLLLHLHHLHLLLHLLLLHLHLLHLLLHHLLHHHHLHHHLLLLHHLLHLLLHHHLLLLLHHHHLHHHHLHLLLHHLHHHLLHLLHLLHHLHLHHLHLLHLLLHHHLLLLHHHHHHLLLLLLLHHLLLHLHHLLHLLLLHHHHLLHHLHLLLLLHHHLLL \r38 X ;
+    }
+  //Chain Pattern:40  Vector:168  TesterCycle:12688
+  Ann {* Chain Pattern:40  Vector:168  TesterCycle:12688 *}
+  "chain_pattern 40":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r29 0 101 \r278 0 1011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLHHLLHHHHHHHHLLHLHLLLLHHHLHHLLLLHHLLHLLHHLLHHHLLHHLLHLLLLLHHLHHLLHLHLLHLHLLHHLHLHLLHLLLLLLLLLHLHLHHHLHHHHHHLHHLHLHLLHHHLLLLHHHHLLHLHHLLLHHHLLHHHLLLHHLHLLLHLHHHLLLHHHLHHHLHLLHHLLHLLLLHLHLLLHLLHHLLLHHHHLLHLLLHLLHLHHLLHLHLLLLLHHLHLHLLHHLHHLLLHHLHHLHHHHLHHLHLHHHLLLLLLHLLLHLLHHHL \r38 X ;
+    }
+  //Chain Pattern:41  Vector:170  TesterCycle:13003
+  Ann {* Chain Pattern:41  Vector:170  TesterCycle:13003 *}
+  "chain_pattern 41":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r27 0 11111 \r275 0 1001011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLLHHLLLHHLLHLLLHHLHLLLHHHHLHHHHHLLHHLHLLHLLHLHLLLHLLHLLLLHHLLHLHLHHLLLHLHHHLHLLHLHHLHLLLHHLHHLHHHLLHLHLLLLHLLHLLHLHHHLLHLHLLHHHHLLHHLLHHHLLHHHHHLHLLHHHHLLLLHLHHHLHLHHLLHLLLHLLLHHLHHLLLLLHLHLLLLLLHHHHHLLHHLLHLLHLHHHHHLHLHLHLLLLHHLLHHLLLHHLLLHHHHHHLHHHHLLHHHHHLHLHHLHHHHLLHHHLL \r38 X ;
+    }
+  //Chain Pattern:42  Vector:172  TesterCycle:13318
+  Ann {* Chain Pattern:42  Vector:172  TesterCycle:13318 *}
+  "chain_pattern 42":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r27 0 11111 \r276 0 101011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHHLLHLHHLLHLLHLHHHLLLLHHHLHLHLHLHHLHLHLLHLHHHHHLHLHHLHLLHLLHLHLLLLHHLLHLHLLLHLHHLHHLHLHLLHLHHLLLHLLH \r12 L HHHLLLLLHHLLHHHHHLLHHHHLLHLLHLLLLLLHLLHLLHHLHHHHHHHLHLLLHLHHHHLLLHHLLHLLHLLHLLLHLHHLHHHLHLHHLHLLHHLHHHHLLHHHHLLHLHLLHHLLHHHLHHLHHLLHLLLHHLHHHHLLLHLHLHHHLLLHHLLLLHL \r38 X ;
+    }
+  //Chain Pattern:43  Vector:174  TesterCycle:13633
+  Ann {* Chain Pattern:43  Vector:174  TesterCycle:13633 *}
+  "chain_pattern 43":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 111 \r276 0 1101011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHLLHHLLLHLLHLLHHHLLHLHLLLLHLLHHHHHHHHLHHLHLHLLLHLLLLLHLHLLHLLHHHLHLHHLHLHLHHLHHLHHLHLLLLHLHHLHHHHHHHLHHHHLHHHLLLLHHHHLLHHHHHLLHLHLLHLLHLHHHHHLLHLHHLHHHLHLHLHLLLHHLLLLLLLLHLLHLHHHHLLHHLLHHLHHHLHHLLLLHHHLLHHHLLLLHHLHLLLHHHHLLHHLLLHLLLHLHHHHLHHLHHLHLHLHLHHLHLLHHHHLLLLHLHLLHLHHL \r38 X ;
+    }
+  //Chain Pattern:44  Vector:176  TesterCycle:13948
+  Ann {* Chain Pattern:44  Vector:176  TesterCycle:13948 *}
+  "chain_pattern 44":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r29 0 111 \r277 0 11011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLHHLLLLHHHHHHLHLHLLHLLHHLLHHHLHHLLHLLHLLHLHLLLLLHLLLHHHLHLLLHHHLLLHLLHHLLHLLLLLHLLHLHLLHHLLLHLHLLLHHLHLHLHHLLHLHHLHLHLLHLHHHLHHHHHLHHHHHLLLHLLLHHHHHLLHLHHHLHHHHLLHHLHHHHLLHHHHLHHLHLHHLLLLHLHLHLLLHLHLHHHLHHHHLHHLHHLHLHLHHHHLLLLLLLHHLHHLHLHLHHHLHLHHLHHHHLHLHHLLHHHHHLHHHHLLLHHL \r38 X ;
+    }
+  //Chain Pattern:45  Vector:178  TesterCycle:14263
+  Ann {* Chain Pattern:45  Vector:178  TesterCycle:14263 *}
+  "chain_pattern 45":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 1111 \r275 0 1011011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLLHHLHHHHLLLLLLHLHHHLHHHLLLLHHLLHHLHLLHLLHHLHHLHLHLHHHHHHLLLHLHHHLHLLHHHLLHHHLHLHHHLHLLHHLLLLHHHHHHLLHHHLLLHLLHHHLHHHLLLHLHLHLHLLHHHHHLHLHLHLHHHHLLHHHLLHHLLHLLLLLLHHHHHHHHLLLLLHLHHLLHLLLLHHHHHLHLHLHLHHHLLHLHLHHHLLLLLHHLLHHLHHLLHLHHLHHHLHLLHLLLLLHLHLLHLHHLLLHLHLHHHLHHHLHLHLHL \r38 X ;
+    }
+  //Chain Pattern:46  Vector:180  TesterCycle:14578
+  Ann {* Chain Pattern:46  Vector:180  TesterCycle:14578 *}
+  "chain_pattern 46":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 10111 \r275 0 111011;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHHLLHHLLHHLLLHHHHHHHHLHLHHHLHHLLHHHHHHLHLLHHLHLHLHLLHLHLLLLHHLLLLLLHHLLHHHHHLHHHLHLLLLLLLHHHLHLLHHLLHHHHLHLLHHHHLHLLLHLHHHLLLHHHLLHLHHHLHLHHHHHLLHHLHHLLLLHLHHLLLLHLLLLHHLHLLHLHHHHLLHLHLLHLHLHLLHLLHLLLHLHHLHLLLLHLHHLHLLLHHLHLLHHHLHHLLLLHLHLHHLLHHLLHHLLLHLLLLLLHLLLHHHHHLHHLHLL \r38 X ;
+    }
+  //Chain Pattern:47  Vector:182  TesterCycle:14893
+  Ann {* Chain Pattern:47  Vector:182  TesterCycle:14893 *}
+  "chain_pattern 47":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 1101000000111010110001100111011001111111000001011000011000110111101101101101110111100100100111001101010000011101001011100000111110101111100110000000110011111001010001011001100101001110101010001000110110111111111001111100110000001 \r46 0  \r10 1 0;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHLLHHLHHLHLHHHHHLHLHLLLHLHLLHHLHLHLHHHHHHLHLHLHLHHLHLHHLHHLHLLHHHLHHHHLHHHHHHHLHHHHLLHLLHHHHLLHLHHHHLLHLHLLLHLHHLHLHHLHLLHLHLHLHLLLLHLHLHHLHHLHLHHHLHHHLLLLLHHLHLLLHLLLLHLLHLHHHLLHLLLHLHLHLHLLHHHHHLHHLHHLLLHLHLHLHHLLHHLHHLLLLHHHLHLHLHHLLHLHLHHLHHHHHHLHHLLLHLHHLLHLHLLLHLLLHLHL \r38 X ;
+    }
+  //Chain Pattern:48  Vector:184  TesterCycle:15208
+  Ann {* Chain Pattern:48  Vector:184  TesterCycle:15208 *}
+  "chain_pattern 48":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 10000110110111000110111101000001111110111100100001000000110110110001100010010100100100001111101100111111001000110011010011100011011011110100001100010111000100011110100000111111110101001111101001010011111011011001101011100110111101 \r45 0  \r10 1 0;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XHHHLHHHHLLLHLLHHLHLLLLLLLHLLHHLLHHLLLHHHLHLLHHHLHHLHHLHLLLHLHHLLHHLHLHLHLHHLHHLLLLLLLLHHLLHHLHHLLLLLLLHHLLHHHLLLLHHLLLLHLHHLLLLLHHLHLLHLLLLLLLHLHHHHLLHLHLLHLLLLHHHLLHHHLLHLLLHHLLHHHLLLLHLLLHLLHHHLLLHLLHHLLHH \r10 L HLHLLHLHLLHLHLHHLLLLLHHLHLLLHHHHLHHLLLHLHLHHHHLLHLLHLHLLLL \r38 X ;
+    }
+  V {  _bidi_=X1 \r16 X 1 \r54 X 1000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" =  \r28 0 10000110110111000110111101000001111110111100100001000000110110110001100010010100100100001111101100111111001000110011010011100011011011110100001100010111000100011110100000111111110101001111101001010011111011011001101011100110111101 \r45 0  \r10 1 0;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLHHLHLHLLHLHHLHHHLHLHHHHLLHHLLHHLHLHHHLLLLHHHLLLHHLHLHLLHLLHLHLLLLHHLLHHHLHLHLLHHLHLLHLLHHLLLHLLHHHLLLLHLLHHHLHHLHHLHLLHLLHLHHHHHHLHHHLHLLHLHLLLLHLHHLLLHHLHHLLLLHLLHLHLLLLHHLLLHLHHHHLHLHLLHLLLHLHHLHLLLHLLLLLHLHLHLHLLHHLHHLHLHLHLHHHLHLHLLLHLHLLHHLLLHHLHHLLLHHLLHLHLHHLLHLLHLLL \r38 X ;
+    }
+  Ann {* End chain test *}
+  //Pattern:0  Vector:188  TesterCycle:15838
+  Ann {* Pattern:0  Vector:188  TesterCycle:15838 *}
+  "pattern 0":
+  V {  _bidi_=X1 \r16 X 1 \r54 X 10X0X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" = 000000011011110111011111110001110111001001101111010001010010000000011010101010011000110000100110111100000001100111110011011100010010111000101001111101101101010111001000010111100101011 \r10 0 11011010100010100011000001011100010010110100100110101011010110000101111000111001110110000111101001101010000000 \r10 1 0;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" =  \r314 X ;
+    }
+  V {  _bidi_=0111000011100001110000111000011100001110000111000011100001110000111X000111000010;
+  }
+  //Pattern:1  Vector:191  TesterCycle:16154
+  Ann {* Pattern:1  Vector:191  TesterCycle:16154 *}
+  "pattern 1":
+  V {  _bidi_=01 \r16 X 1 \r17 X 1XXX0XXX1XXX0 \r16 X 11X0X0X11000X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" = 011011001011001100110011011010011111011111001011111111000001100100010001111001000110111100010001101010100101101010000111001011111110101110001101011010111111100011001100000110001100111001011000110001100011010101100000100101100010100011100001110001011 \r11 0 1001010010011000001010001111110101101001010 \r10 1 0;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLLLLHHHHLHHHHHHLLLHHHHLHHLLHHLLHHLHLHLLHLHLHLLHLLHHLLHHHLLHHLHHHLLHLLLLLLHLLLHHLLHHHHLHHHHHLLLHLHHLLLHLLLLLLLLLHLHLHLHLHLHLLHHLLLLLLHLLLLLHHHLLLHHHHLHHHLLHLHHHLLHLHLLHLHLLHHLLHLLLHLHHLHLHHLHHLHLHLLLHLHHHHHHLLLLLHLLHHLHHHLLHHLLLHHLHHHLLHLLLLHHHLHHHHHLLHHLLHHLHLLLHLHHHLLLHHLHL \r38 X ;
+    }
+  V {  _bidi_=1110101101010110100011010101101010110101011010101101010110101011101X100101010010;
+  }
+  V {  _bidi_=11 \r16 X 1 \r17 X 0XXX0XXX1XXX1 \r16 X 01X1X0X01010X11;
+  }
+  Macro "scan_edt_grp1"  {
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_gpio0[1]_" = 011011001011001100110011011010011111011111001011111111000001100100010001111001000110111100010001101010100101101010000111001011111110101110001101011010111111100011001100000110001100111001011000110001100011010101100000100101100010100011100001110001011 \r11 0 1001010010011000001010001111110101101001010 \r10 1 0;
+    "_edt_thejas_32m_chip_top_rtl2_tessent_edt_c1_inst__edt_block_channel1_urt0_sout_" = XLHLLLLLHLLHHHHHLHHLLHLLHHHLLHHLLHLHHHLHHLLLLLHHLHHHHLHLHHLHHLLLHHHLLHHLHHHHLLHLLLHLLLLLLLLHLHLHLLHHLLHHHLLLHHHHLLLHHLLLHHHLLLHHLLLHLLLLLLLHLLHLHLLHLHHLLHHHHHHHHLLHLLLHLLLHHLHHLHHLHLHHHLLLHHLLHHHHHHLLLLHHLHHHLLLHHLHHLHLHHLHHLHLHLLHHLHLLLLHLHHHLLHLHHHHLHLHLHHHHHLLLHLLHLHLHLLHH \r38 X ;
+    }
+}
